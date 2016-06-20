@@ -7,14 +7,11 @@ import android.app.Activity;
 import android.content.Intent;
 
 public class MainActivity extends Activity {
-    private MySQLite mySQLite;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mySQLite = new MySQLite(this);
-
 
         // Button1 (Add)
         final Button btn1 = (Button) findViewById(R.id.button1);
@@ -30,5 +27,6 @@ public class MainActivity extends Activity {
         });
 
     }
+
 
 }

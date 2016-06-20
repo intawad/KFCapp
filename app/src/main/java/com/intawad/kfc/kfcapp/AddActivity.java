@@ -10,13 +10,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class AddActivity extends Activity  {
-    private MySQLite mySQLite;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
-
-        mySQLite = new MySQLite(this);
 
 
         // btnSave (Save)
@@ -50,25 +48,27 @@ public class AddActivity extends Activity  {
     public boolean SaveData()
     {
         // txtMemberID, txtName, txtTel
-        final EditText tYear = (EditText) findViewById(R.id.txtYear);
-        final EditText tNew = (EditText) findViewById(R.id.txtNew);
-        final EditText tRoot1 = (EditText) findViewById(R.id.txtRoot1);
+        final EditText tDistanceID = (EditText) findViewById(R.id.intDistanceID);
+        final EditText tYear = (EditText) findViewById(R.id.intYear);
+        final EditText tNew = (EditText) findViewById(R.id.intNew);
+
+
 
         // Dialog
         final AlertDialog.Builder adb = new AlertDialog.Builder(this);
         AlertDialog ad = adb.create();
 
         // Check MemberID
-        if(tYear.getText().length() == 0)
+        if(tDistanceID.getText().length() == 0)
         {
-            ad.setMessage("Please input [MemberID] ");
+            ad.setMessage("Please input [DistanceID] ");
             ad.show();
-            tYear.requestFocus();
+            tDistanceID.requestFocus();
             return false;
         }
 
-//        // Check Name
-//        if(tNew.getText().length() == 0)
+        // Check Name
+//        if(tName.getText().length() == 0)
 //        {
 //            ad.setMessage("Please input [Name] ");
 //            ad.show();
@@ -76,7 +76,7 @@ public class AddActivity extends Activity  {
 //            return false;
 //        }
 
-//        // Check Tel
+        // Check Tel
 //        if(tTel.getText().length() == 0)
 //        {
 //            ad.setMessage("Please input [Tel] ");
@@ -86,28 +86,29 @@ public class AddActivity extends Activity  {
 //        }
 
         // new Class DB
-//        final myDBClass myDb = new myDBClass(this);
+        final myDBClass myDb = new myDBClass(this);
 
-//        // Check Data (MemberID exists)
-//        String arrData[] = myDb.SelectData(tMemberID.getText().toString());
-//        if(arrData != null)
-//        {
-//            ad.setMessage("MemberID already exists!  ");
-//            ad.show();
-//            tMemberID.requestFocus();
-//            return false;
-//        }
+        // Check Data (MemberID exists)
+        String arrData[] = myDb.SelectData(tDistanceID.getText().toString());
+        if(arrData != null)
+        {
+            ad.setMessage("DistanceID already exists!  ");
+            ad.show();
+            tDistanceID.requestFocus();
+            return false;
+        }
 
-//        // Save Data
-//        long saveStatus = myDb.InsertData(tMemberID.getText().toString(),
-//                tName.getText().toString(),
-//                tTel.getText().toString());
-//        if(saveStatus <=  0)
-//        {
-//            ad.setMessage("Error!! ");
-//            ad.show();
-//            return false;
-//        }
+        // Save Data
+        long saveStatus = myDb.InsertData(tDistanceID.getText().toString(),
+                tYear.getText().toString(),
+                tNew.getText().toString());
+
+        if(saveStatus <=  0)
+        {
+            ad.setMessage("Error!! ");
+            ad.show();
+            return false;
+        }
 
         Toast.makeText(AddActivity.this,"Add Data Successfully. ",
                 Toast.LENGTH_SHORT).show();
