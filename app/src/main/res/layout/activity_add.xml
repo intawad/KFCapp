@@ -31,7 +31,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/intDistanceID"
+                    android:id="@+id/txtDistanceID"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -53,7 +53,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/intYear"
+                    android:id="@+id/txtYear"
                     android:layout_weight="2" />
             </LinearLayout>
 
@@ -74,7 +74,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/intNew"
+                    android:id="@+id/txtNew"
                     android:layout_weight="2"
 
                     android:inputType="number" />
@@ -119,7 +119,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText4"
+                    android:id="@+id/txtRoot2"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -140,7 +140,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText5"
+                    android:id="@+id/txtCare1"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -161,7 +161,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText6"
+                    android:id="@+id/txtCare2"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -182,7 +182,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText7"
+                    android:id="@+id/txtReady"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -203,7 +203,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText8"
+                    android:id="@+id/txtGas1"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -224,7 +224,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText9"
+                    android:id="@+id/txtGas2"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -245,7 +245,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText10"
+                    android:id="@+id/txtDay35"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -267,7 +267,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText11"
+                    android:id="@+id/txtDay45"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -288,7 +288,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText12"
+                    android:id="@+id/txtDay60"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -309,7 +309,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText13"
+                    android:id="@+id/txtDay75"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -330,7 +330,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText14"
+                    android:id="@+id/txtDay85"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -351,7 +351,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText15"
+                    android:id="@+id/txtDay100"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -372,7 +372,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText16"
+                    android:id="@+id/txtDay120"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -394,7 +394,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText17"
+                    android:id="@+id/txtDay135"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -415,7 +415,7 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText18"
+                android:id="@+id/txtDay150"
                 android:layout_weight="2"
                 android:inputType="number" />
         </LinearLayout>
@@ -436,7 +436,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText19"
+                    android:id="@+id/txtDie"
                     android:layout_weight="2"
                     android:inputType="number" />
         </LinearLayout>

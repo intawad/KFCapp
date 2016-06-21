@@ -47,10 +47,28 @@ public class AddActivity extends Activity  {
 
     public boolean SaveData()
     {
-        // txtMemberID, txtName, txtTel
-        final EditText tDistanceID = (EditText) findViewById(R.id.intDistanceID);
-        final EditText tYear = (EditText) findViewById(R.id.intYear);
-        final EditText tNew = (EditText) findViewById(R.id.intNew);
+        // กดหนดตัวแปลจะเก็บลงฐานข้อมูล
+        final EditText tDistanceID = (EditText) findViewById(R.id.txtDistanceID);
+        final EditText tYear = (EditText) findViewById(R.id.txtYear);
+        final EditText tNew = (EditText) findViewById(R.id.txtNew);
+        final EditText tRoot1 = (EditText) findViewById(R.id.txtRoot1);
+        final EditText tRoot2 = (EditText) findViewById(R.id.txtRoot2);
+        final EditText tCare1 = (EditText) findViewById(R.id.txtCare1);
+        final EditText tCare2 = (EditText) findViewById(R.id.txtCare2);
+        final EditText tReady = (EditText) findViewById(R.id.txtReady);
+        final EditText tGas1 = (EditText) findViewById(R.id.txtGas1);
+        final EditText tGas2 = (EditText) findViewById(R.id.txtGas2);
+        final EditText tDay35 = (EditText) findViewById(R.id.txtDay35);
+        final EditText tDay45 = (EditText) findViewById(R.id.txtDay45);
+        final EditText tDay60 = (EditText) findViewById(R.id.txtDay60);
+        final EditText tDay75 = (EditText) findViewById(R.id.txtDay75);
+        final EditText tDay85 = (EditText) findViewById(R.id.txtDay85);
+        final EditText tDay100 = (EditText) findViewById(R.id.txtDay100);
+        final EditText tDay120 = (EditText) findViewById(R.id.txtDay120);
+        final EditText tDay135 = (EditText) findViewById(R.id.txtDay135);
+        final EditText tDay150 = (EditText) findViewById(R.id.txtDay150);
+        final EditText tDie = (EditText) findViewById(R.id.txtDie);
+
 
 
 
@@ -67,32 +85,24 @@ public class AddActivity extends Activity  {
             return false;
         }
 
-        // Check Name
-//        if(tName.getText().length() == 0)
-//        {
-//            ad.setMessage("Please input [Name] ");
-//            ad.show();
-//            tName.requestFocus();
-//            return false;
-//        }
+         //Check Year
+        if(tYear.getText().length() == 0)
+        {
+            ad.setMessage("Please input [Year] ");
+            ad.show();
+            tYear.requestFocus();
+            return false;
+        }
 
-        // Check Tel
-//        if(tTel.getText().length() == 0)
-//        {
-//            ad.setMessage("Please input [Tel] ");
-//            ad.show();
-//            tTel.requestFocus();
-//            return false;
-//        }
 
         // new Class DB
         final myDBClass myDb = new myDBClass(this);
 
-        // Check Data (MemberID exists)
+        // Check Data DistanceID already exits!
         String arrData[] = myDb.SelectData(tDistanceID.getText().toString());
         if(arrData != null)
         {
-            ad.setMessage("DistanceID already exists!  ");
+            ad.setMessage("จุดนี้ซ้ำกับในฐานข้อมูล!  ");
             ad.show();
             tDistanceID.requestFocus();
             return false;
@@ -101,7 +111,24 @@ public class AddActivity extends Activity  {
         // Save Data
         long saveStatus = myDb.InsertData(tDistanceID.getText().toString(),
                 tYear.getText().toString(),
-                tNew.getText().toString());
+                tNew.getText().toString(),
+                tRoot1.getText().toString(),
+                tRoot2.getText().toString(),
+                tCare1.getText().toString(),
+                tCare2.getText().toString(),
+                tReady.getText().toString(),
+                tGas1.getText().toString(),
+                tGas2.getText().toString(),
+                tDay35.getText().toString(),
+                tDay45.getText().toString(),
+                tDay60.getText().toString(),
+                tDay75.getText().toString(),
+                tDay85.getText().toString(),
+                tDay100.getText().toString(),
+                tDay120.getText().toString(),
+                tDay135.getText().toString(),
+                tDay150.getText().toString(),
+                tDie.getText().toString());
 
         if(saveStatus <=  0)
         {

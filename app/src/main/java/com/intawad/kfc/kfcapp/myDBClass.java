@@ -53,30 +53,38 @@ public class myDBClass extends SQLiteOpenHelper {
     }
 
     // Insert Data
-    public long InsertData(String strDistanceID, String strYear, String strNew) {
+    public long InsertData(String strDistanceID, String strYear, String strNew, String strRoot1, String strRoot2, String strCare1
+                            , String strCare2, String strReady, String strGas1, String strGas2, String strDay35, String strDay45
+                            , String strDay60, String strDay75, String strDay85, String strDay100, String strDay120, String strDay135
+                            , String strDay150, String strDie) {
         // TODO Auto-generated method stub
 
         try {
             SQLiteDatabase db;
             db = this.getWritableDatabase(); // Write Data
 
-            /**
-             *  for API 11 and above
-             SQLiteStatement insertCmd;
-             String strSQL = "INSERT INTO " + TABLE_MEMBER
-             + "(MemberID,Name,Tel) VALUES (?,?,?)";
-
-             insertCmd = db.compileStatement(strSQL);
-             insertCmd.bindString(1, strMemberID);
-             insertCmd.bindString(2, strName);
-             insertCmd.bindString(3, strTel);
-             return insertCmd.executeInsert();
-             */
-
             ContentValues Val = new ContentValues();
             Val.put("DistanceID", strDistanceID);
             Val.put("Year", strYear);
             Val.put("New", strNew);
+            Val.put("Root1", strRoot1);
+            Val.put("Root2", strRoot2);
+            Val.put("Care1", strCare1);
+            Val.put("Care2", strCare2);
+            Val.put("Ready", strReady);
+            Val.put("Gas1", strGas1);
+            Val.put("Gas2", strGas2);
+            Val.put("Day35", strDay35);
+            Val.put("Day45", strDay45);
+            Val.put("Day60", strDay60);
+            Val.put("Day75", strDay75);
+            Val.put("Day85", strDay85);
+            Val.put("Day100", strDay100);
+            Val.put("Day120", strDay120);
+            Val.put("Day135", strDay135);
+            Val.put("Day150", strDay150);
+            Val.put("Die", strDie);
+
 
             long rows = db.insert(TABLE_MEMBER, null, Val);
 
