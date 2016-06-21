@@ -6,6 +6,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class myDBClass extends SQLiteOpenHelper {
 
 
@@ -98,6 +101,27 @@ public class myDBClass extends SQLiteOpenHelper {
     }
 
 
+    // Delete Data
+    public long DeleteData(String strDistanceID) {
+        // TODO Auto-generated method stub
+
+        try {
+
+            SQLiteDatabase db;
+            db = this.getWritableDatabase(); // Write Data
+
+            long rows = db.delete(TABLE_MEMBER, "DistanceID = ?",
+                    new String[] { String.valueOf(strDistanceID) });
+
+            db.close();
+            return rows; // return rows deleted.
+
+        } catch (Exception e) {
+            return -1;
+        }
+
+    }
+
     // Select Data
     public String[] SelectData(String strDistanceID) {
         // TODO Auto-generated method stub
@@ -137,6 +161,43 @@ public class myDBClass extends SQLiteOpenHelper {
     }
 
 
+
+    // Show All Data
+    public ArrayList<HashMap<String, String>> SelectAllData() {
+        // TODO Auto-generated method stub
+
+        try {
+
+            ArrayList<HashMap<String, String>> MyArrList = new ArrayList<HashMap<String, String>>();
+            HashMap<String, String> map;
+
+            SQLiteDatabase db;
+            db = this.getReadableDatabase(); // Read Data
+
+            String strSQL = "SELECT  * FROM " + TABLE_MEMBER;
+            Cursor cursor = db.rawQuery(strSQL, null);
+
+            if(cursor != null)
+            {
+                if (cursor.moveToFirst()) {
+                    do {
+                        map = new HashMap<String, String>();
+                        map.put("DistanceID", cursor.getString(0));
+                        map.put("Year", cursor.getString(1));
+                        map.put("New", cursor.getString(2));
+                        MyArrList.add(map);
+                    } while (cursor.moveToNext());
+                }
+            }
+            cursor.close();
+            db.close();
+            return MyArrList;
+
+        } catch (Exception e) {
+            return null;
+        }
+
+    }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
