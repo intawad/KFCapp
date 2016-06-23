@@ -79,21 +79,11 @@ public class AddActivity extends Activity  {
         // Check MemberID
         if(tDistanceID.getText().length() == 0)
         {
-            ad.setMessage("Please input [DistanceID] ");
+            ad.setMessage("กรุณาใส่จุดและข้อมูลระยะสับปะรด !!! ");
             ad.show();
             tDistanceID.requestFocus();
             return false;
         }
-
-         //Check Year
-        if(tYear.getText().length() == 0)
-        {
-            ad.setMessage("Please input [Year] ");
-            ad.show();
-            tYear.requestFocus();
-            return false;
-        }
-
 
         // new Class DB
         final myDBClass myDb = new myDBClass(this);

@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Update ข้อมูลระยะสับปะรด  "
+        android:layout_span="3"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</TableRow>
+
+<TableRow
+android:id="@+id/tableRow2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:padding="5dip" >
+
+<TextView
+    android:id="@+id/textView20"
+    android:text="จุดที่ : "
+    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+<TextView
+    android:id="@+id/txtUpdateDistanceID"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="DistanceID" />
+
+</TableRow>
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -14,27 +51,6 @@
             android:padding="15dp"
             android:background="#82ffffff">
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="จุดที่ :"
-                    android:id="@+id/textView20"
-                    android:textSize="@dimen/h2"
-                    android:layout_weight="1"
-                    />
-
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtDistanceID"
-                    android:layout_weight="2"
-                    android:inputType="number" />
-            </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -48,12 +64,12 @@
                     android:id="@+id/textView1"
                     android:textSize="@dimen/h2"
                     android:layout_weight="1"
-                     />
+                    />
 
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtYear"
+                    android:id="@+id/txtUpdateYear"
                     android:layout_weight="2" />
             </LinearLayout>
 
@@ -69,12 +85,12 @@
                     android:id="@+id/textView2"
                     android:textSize="@dimen/h2"
                     android:layout_weight="1"
-                     />
+                    />
 
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtNew"
+                    android:id="@+id/txtUpdateNew"
                     android:layout_weight="2"
 
                     android:inputType="number" />
@@ -92,12 +108,12 @@
                     android:id="@+id/textView3"
                     android:textSize="@dimen/h2"
                     android:layout_weight="1"
-                     />
+                    />
 
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtRoot1"
+                    android:id="@+id/txtUpdateRoot1"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -114,12 +130,12 @@
                     android:id="@+id/textView4"
                     android:textSize="@dimen/h2"
                     android:layout_weight="1"
-                     />
+                    />
 
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtRoot2"
+                    android:id="@+id/txtUpdateRoot2"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -140,7 +156,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtCare1"
+                    android:id="@+id/txtUpdateCare1"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -161,7 +177,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtCare2"
+                    android:id="@+id/txtUpdateCare2"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -182,7 +198,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtReady"
+                    android:id="@+id/txtUpdateReady"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -203,7 +219,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtGas1"
+                    android:id="@+id/txtUpdateGas1"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -224,7 +240,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtGas2"
+                    android:id="@+id/txtUpdateGas2"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -245,7 +261,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtDay35"
+                    android:id="@+id/txtUpdateDay35"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -267,7 +283,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtDay45"
+                    android:id="@+id/txtUpdateDay45"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -288,7 +304,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtDay60"
+                    android:id="@+id/txtUpdateDay60"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -309,7 +325,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtDay75"
+                    android:id="@+id/txtUpdateDay75"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -330,7 +346,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtDay85"
+                    android:id="@+id/txtUpdateDay85"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -351,7 +367,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtDay100"
+                    android:id="@+id/txtUpdateDay100"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -372,7 +388,7 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtDay120"
+                    android:id="@+id/txtUpdateDay120"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
@@ -394,33 +410,33 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtDay135"
+                    android:id="@+id/txtUpdateDay135"
                     android:layout_weight="2"
                     android:inputType="number" />
             </LinearLayout>
 
             <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="150 วัน :"
-                android:id="@+id/textView18"
-                android:textSize="@dimen/h2"
-                android:layout_weight="1" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="150 วัน :"
+                    android:id="@+id/textView18"
+                    android:textSize="@dimen/h2"
+                    android:layout_weight="1" />
 
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtDay150"
-                android:layout_weight="2"
-                android:inputType="number" />
-        </LinearLayout>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtUpdateDay150"
+                    android:layout_weight="2"
+                    android:inputType="number" />
+            </LinearLayout>
 
-        <LinearLayout
+            <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
@@ -436,34 +452,29 @@
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtDie"
+                    android:id="@+id/txtUpdateDie"
                     android:layout_weight="2"
                     android:inputType="number" />
-        </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:gravity="center_horizontal">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ADD"
-                    android:id="@+id/btnSave" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cancel"
-                    android:id="@+id/btnCancel" />
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/LinearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dip" >
 
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save" />
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel" />
 
-
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

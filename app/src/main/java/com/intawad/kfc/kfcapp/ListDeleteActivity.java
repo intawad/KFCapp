@@ -77,10 +77,13 @@ public class ListDeleteActivity extends Activity  {
         String[] menuItems = getResources().getStringArray(R.array.CmdMenu);
         String CmdName = menuItems[menuItemIndex];
         String MemID = MebmerList.get(info.position).get("DistanceID").toString();
-        //String MemName = MebmerList.get(info.position).get("Name").toString();
+//        String MemName = MebmerList.get(info.position).get("Name").toString();
 
         // Check Event Command
         if ("Edit".equals(CmdName)) {
+            // Show on new activity
+            Intent newActivity = new Intent(ListDeleteActivity.this,Activity.class);
+            startActivity(newActivity);
 
              // for Delete Command
         } else if ("Delete".equals(CmdName)) {

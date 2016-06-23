@@ -27,13 +27,26 @@ public class MainActivity extends Activity {
         });
 
         // Button2 (Delete)
-        final Button btn4 = (Button) findViewById(R.id.btndelete);
+        final Button btn2 = (Button) findViewById(R.id.btndelete);
         // Perform action on click
-        btn4.setOnClickListener(new View.OnClickListener() {
+        btn2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 // Open Form ListDelete
                 Intent newActivity = new Intent(MainActivity.this,ListDeleteActivity.class);
+                startActivity(newActivity);
+
+            }
+        });
+
+//        // Button2 (Update)
+        final Button btn3 = (Button) findViewById(R.id.btnedit);
+        // Perform action on click
+        btn3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                // Open Form ListUpdate
+                Intent newActivity = new Intent(MainActivity.this,ListUpdateActivity.class);
                 startActivity(newActivity);
 
             }

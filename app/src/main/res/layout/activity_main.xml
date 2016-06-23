@@ -44,18 +44,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/button1"
-                android:text="Insert Data" />
+                android:text="เพิ่มข้อมูลระยะสับปะรด" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Delete / Edit"
+                android:text="ลบข้อมูลระยะสับปะรด"
                 android:id="@+id/btndelete" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Show Data"
+                android:text="แก้ไขข้อมูลระยะสับปะรด"
+                android:id="@+id/btnedit" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="แสดงผลข้อมูลระยะสับปะรด"
                 android:id="@+id/button3" />
         </LinearLayout>
 
