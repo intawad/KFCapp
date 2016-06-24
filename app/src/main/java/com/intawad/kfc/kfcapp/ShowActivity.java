@@ -13,12 +13,12 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-public class ListUpdateActivity extends Activity  {
+public class ShowActivity extends Activity  {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_delete);
+        setContentView(R.layout.activity_show);
 
         final myDBClass myDb = new myDBClass(this);
         final ArrayList<HashMap<String, String>> MebmerList = myDb.SelectAllData();
@@ -27,16 +27,15 @@ public class ListUpdateActivity extends Activity  {
         ListView lisView1 = (ListView)findViewById(R.id.listView1);
 
         SimpleAdapter sAdap;
-        sAdap = new SimpleAdapter(ListUpdateActivity.this, MebmerList, R.layout.activity_column,
-                new String[] {"DistanceID", "Year", "New", "Root1", "Root2", "Care1", "Care2", "Ready", "Gas1", "Gas2"
-                        , "Day35", "Day45", "Day60", "Day75", "Day85", "Day100", "Day120", "Day135", "Day105", "Die"}, new int[] {R.id.ColDistanceID, R.id.ColYear});
+        sAdap = new SimpleAdapter(ShowActivity.this, MebmerList, R.layout.activity_column,
+                new String[] {"DistanceID", "Year"}, new int[] {R.id.ColDistanceID, R.id.ColYear});
         lisView1.setAdapter(sAdap);
 
         lisView1.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> myAdapter, View myView, int position, long mylng) {
 
                 // Show on new activity
-                Intent newActivity = new Intent(ListUpdateActivity.this,UpdateActivity.class);
+                Intent newActivity = new Intent(ShowActivity.this,DetailActivity.class);
                 newActivity.putExtra("DisID", MebmerList.get(position).get("DistanceID").toString());
                 startActivity(newActivity);
 
@@ -49,7 +48,7 @@ public class ListUpdateActivity extends Activity  {
         cancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Open Form Main
-                Intent newActivity = new Intent(ListUpdateActivity.this,MainActivity.class);
+                Intent newActivity = new Intent(ShowActivity.this,MainActivity.class);
                 startActivity(newActivity);
             }
         });

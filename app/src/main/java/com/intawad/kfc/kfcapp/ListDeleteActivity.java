@@ -76,7 +76,7 @@ public class ListDeleteActivity extends Activity  {
         int menuItemIndex = item.getItemId();
         String[] menuItems = getResources().getStringArray(R.array.CmdMenu);
         String CmdName = menuItems[menuItemIndex];
-        String MemID = MebmerList.get(info.position).get("DistanceID").toString();
+        String DisID = MebmerList.get(info.position).get("DistanceID").toString();
 //        String MemName = MebmerList.get(info.position).get("Name").toString();
 
         // Check Event Command
@@ -90,7 +90,7 @@ public class ListDeleteActivity extends Activity  {
 
             myDBClass myDb = new myDBClass(this);
 
-            long flg = myDb.DeleteData(MemID);
+            long flg = myDb.DeleteData(DisID);
             if(flg > 0)
             {
                 Toast.makeText(ListDeleteActivity.this,"Delete Data Successfully",

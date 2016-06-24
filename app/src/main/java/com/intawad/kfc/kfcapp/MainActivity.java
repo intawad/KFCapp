@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
             }
         });
 
-//        // Button2 (Update)
+//        // Button3 (Update)
         final Button btn3 = (Button) findViewById(R.id.btnedit);
         // Perform action on click
         btn3.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +47,19 @@ public class MainActivity extends Activity {
 
                 // Open Form ListUpdate
                 Intent newActivity = new Intent(MainActivity.this,ListUpdateActivity.class);
+                startActivity(newActivity);
+
+            }
+        });
+
+        // Button4 (Show)
+        final Button btn4 = (Button) findViewById(R.id.btnshow);
+        // Perform action on click
+        btn4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                // Open Form Show
+                Intent newActivity = new Intent(MainActivity.this,ShowActivity.class);
                 startActivity(newActivity);
 
             }

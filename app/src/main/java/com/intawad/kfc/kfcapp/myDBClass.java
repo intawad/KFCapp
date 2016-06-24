@@ -148,6 +148,23 @@ public class myDBClass extends SQLiteOpenHelper {
                     arrData[0] = cursor.getString(0);
                     arrData[1] = cursor.getString(1);
                     arrData[2] = cursor.getString(2);
+                    arrData[3] = cursor.getString(3);
+                    arrData[4] = cursor.getString(4);
+                    arrData[5] = cursor.getString(5);
+                    arrData[6] = cursor.getString(6);
+                    arrData[7] = cursor.getString(7);
+                    arrData[8] = cursor.getString(8);
+                    arrData[9] = cursor.getString(9);
+                    arrData[10] = cursor.getString(10);
+                    arrData[11] = cursor.getString(11);
+                    arrData[12] = cursor.getString(12);
+                    arrData[13] = cursor.getString(13);
+                    arrData[14] = cursor.getString(14);
+                    arrData[15] = cursor.getString(15);
+                    arrData[16] = cursor.getString(16);
+                    arrData[17] = cursor.getString(17);
+                    arrData[18] = cursor.getString(18);
+                    arrData[19] = cursor.getString(19);
                 }
             }
             cursor.close();
@@ -185,6 +202,23 @@ public class myDBClass extends SQLiteOpenHelper {
                         map.put("DistanceID", cursor.getString(0));
                         map.put("Year", cursor.getString(1));
                         map.put("New", cursor.getString(2));
+                        map.put("Root1", cursor.getString(3));
+                        map.put("Root2", cursor.getString(4));
+                        map.put("Care1", cursor.getString(5));
+                        map.put("Care2", cursor.getString(6));
+                        map.put("Ready", cursor.getString(7));
+                        map.put("Gas1", cursor.getString(8));
+                        map.put("Gas2", cursor.getString(9));
+                        map.put("Day35", cursor.getString(10));
+                        map.put("Day45", cursor.getString(11));
+                        map.put("Day60", cursor.getString(12));
+                        map.put("Day75", cursor.getString(13));
+                        map.put("Day85", cursor.getString(14));
+                        map.put("Day100", cursor.getString(15));
+                        map.put("Day120", cursor.getString(16));
+                        map.put("Day135", cursor.getString(17));
+                        map.put("Day150", cursor.getString(18));
+                        map.put("Die", cursor.getString(19));
                         MyArrList.add(map);
                     } while (cursor.moveToNext());
                 }
