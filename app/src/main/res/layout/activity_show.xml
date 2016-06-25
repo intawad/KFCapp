@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="Show Member : "
+            android:text="ข้อมูลระยะสับปะรด"
             android:layout_span="1"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 

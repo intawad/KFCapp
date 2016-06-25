@@ -56,23 +56,23 @@ public class UpdateActivity extends Activity  {
         final TextView tUpdateDistanceID = (TextView) findViewById(R.id.txtUpdateDistanceID);
         final EditText tUpdateYear = (EditText) findViewById(R.id.txtUpdateYear);
         final EditText tUpdateNew = (EditText) findViewById(R.id.txtUpdateNew);
-        final EditText tUpdateRoot1 = (EditText) findViewById(R.id.txtRoot1);
-        final EditText tUpdateRoot2 = (EditText) findViewById(R.id.txtRoot2);
-        final EditText tUpdateCare1 = (EditText) findViewById(R.id.txtCare1);
-        final EditText tUpdateCare2 = (EditText) findViewById(R.id.txtCare2);
-        final EditText tUpdateReady = (EditText) findViewById(R.id.txtReady);
-        final EditText tUpdateGas1 = (EditText) findViewById(R.id.txtGas1);
-        final EditText tUpdateGas2 = (EditText) findViewById(R.id.txtGas2);
-        final EditText tUpdateDay35 = (EditText) findViewById(R.id.txtDay35);
-        final EditText tUpdateDay45 = (EditText) findViewById(R.id.txtDay45);
-        final EditText tUpdateDay60 = (EditText) findViewById(R.id.txtDay60);
-        final EditText tUpdateDay75 = (EditText) findViewById(R.id.txtDay75);
-        final EditText tUpdateDay85 = (EditText) findViewById(R.id.txtDay85);
-        final EditText tUpdateDay100 = (EditText) findViewById(R.id.txtDay100);
-        final EditText tUpdateDay120 = (EditText) findViewById(R.id.txtDay120);
-        final EditText tUpdateDay135 = (EditText) findViewById(R.id.txtDay135);
-        final EditText tUpdateDay150 = (EditText) findViewById(R.id.txtDay150);
-        final EditText tUpdateDie = (EditText) findViewById(R.id.txtDie);
+        final EditText tUpdateRoot1 = (EditText) findViewById(R.id.txtUpdateRoot1);
+        final EditText tUpdateRoot2 = (EditText) findViewById(R.id.txtUpdateRoot2);
+        final EditText tUpdateCare1 = (EditText) findViewById(R.id.txtUpdateCare1);
+        final EditText tUpdateCare2 = (EditText) findViewById(R.id.txtUpdateCare2);
+        final EditText tUpdateReady = (EditText) findViewById(R.id.txtUpdateReady);
+        final EditText tUpdateGas1 = (EditText) findViewById(R.id.txtUpdateGas1);
+        final EditText tUpdateGas2 = (EditText) findViewById(R.id.txtUpdateGas2);
+        final EditText tUpdateDay35 = (EditText) findViewById(R.id.txtUpdateDay35);
+        final EditText tUpdateDay45 = (EditText) findViewById(R.id.txtUpdateDay45);
+        final EditText tUpdateDay60 = (EditText) findViewById(R.id.txtUpdateDay60);
+        final EditText tUpdateDay75 = (EditText) findViewById(R.id.txtUpdateDay75);
+        final EditText tUpdateDay85 = (EditText) findViewById(R.id.txtUpdateDay85);
+        final EditText tUpdateDay100 = (EditText) findViewById(R.id.txtUpdateDay100);
+        final EditText tUpdateDay120 = (EditText) findViewById(R.id.txtUpdateDay120);
+        final EditText tUpdateDay135 = (EditText) findViewById(R.id.txtUpdateDay135);
+        final EditText tUpdateDay150 = (EditText) findViewById(R.id.txtUpdateDay150);
+        final EditText tUpdateDie = (EditText) findViewById(R.id.txtUpdateDie);
 
         // new Class DB
         final myDBClass myDb = new myDBClass(this);
@@ -84,6 +84,24 @@ public class UpdateActivity extends Activity  {
             tUpdateDistanceID.setText(arrData[0]);
             tUpdateYear.setText(arrData[1]);
             tUpdateNew.setText(arrData[2]);
+            tUpdateRoot1.setText(arrData[3]);
+            tUpdateRoot2.setText(arrData[4]);
+            tUpdateCare1.setText(arrData[5]);
+            tUpdateCare2.setText(arrData[6]);
+            tUpdateReady.setText(arrData[7]);
+            tUpdateGas1.setText(arrData[8]);
+            tUpdateGas2.setText(arrData[9]);
+            tUpdateDay35.setText(arrData[10]);
+            tUpdateDay45.setText(arrData[11]);
+            tUpdateDay60.setText(arrData[12]);
+            tUpdateDay75.setText(arrData[13]);
+            tUpdateDay85.setText(arrData[14]);
+            tUpdateDay100.setText(arrData[15]);
+            tUpdateDay120.setText(arrData[16]);
+            tUpdateDay135.setText(arrData[17]);
+            tUpdateDay150.setText(arrData[18]);
+            tUpdateDie.setText(arrData[19]);
+
         }
 
     }
@@ -116,23 +134,23 @@ public class UpdateActivity extends Activity  {
         final AlertDialog.Builder adb = new AlertDialog.Builder(this);
         AlertDialog ad = adb.create();
 
-        // Check Year
-        if(tUpdateYear.getText().length() == 0)
-        {
-            ad.setMessage("Please input [Year] ");
-            ad.show();
-            tUpdateYear.requestFocus();
-            return false;
-        }
-
-        // Check New
-        if(tUpdateNew.getText().length() == 0)
-        {
-            ad.setMessage("Please input [New] ");
-            ad.show();
-            tUpdateNew.requestFocus();
-            return false;
-        }
+//        // Check Year
+//        if(tUpdateYear.getText().length() == 0)
+//        {
+//            ad.setMessage("Please input [Year] ");
+//            ad.show();
+//            tUpdateYear.requestFocus();
+//            return false;
+//        }
+//
+//        // Check New
+//        if(tUpdateNew.getText().length() == 0)
+//        {
+//            ad.setMessage("Please input [New] ");
+//            ad.show();
+//            tUpdateNew.requestFocus();
+//            return false;
+//        }
 
         // new Class DB
         final myDBClass myDb = new myDBClass(this);

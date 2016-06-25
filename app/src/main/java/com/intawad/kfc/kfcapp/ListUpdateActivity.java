@@ -18,7 +18,7 @@ public class ListUpdateActivity extends Activity  {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_delete);
+        setContentView(R.layout.activity_list_update);
 
         final myDBClass myDb = new myDBClass(this);
         final ArrayList<HashMap<String, String>> MebmerList = myDb.SelectAllData();
@@ -29,7 +29,12 @@ public class ListUpdateActivity extends Activity  {
         SimpleAdapter sAdap;
         sAdap = new SimpleAdapter(ListUpdateActivity.this, MebmerList, R.layout.activity_column,
                 new String[] {"DistanceID", "Year", "New", "Root1", "Root2", "Care1", "Care2", "Ready", "Gas1", "Gas2"
-                        , "Day35", "Day45", "Day60", "Day75", "Day85", "Day100", "Day120", "Day135", "Day105", "Die"}, new int[] {R.id.ColDistanceID, R.id.ColYear});
+                        , "Day35", "Day45", "Day60", "Day75", "Day85", "Day100", "Day120", "Day135", "Day105", "Die"}
+                , new int[] {R.id.ColDistanceID, R.id.ColYear});
+                /*--, R.id.ColNew, R.id.ColRoot1, R.id.ColRoot2, R.id.ColCare1
+                , R.id.ColCare2, R.id.ColReady, R.id.ColGas1, R.id.ColGas2, R.id.ColDay35, R.id.ColDay45, R.id.ColDay60
+                , R.id.ColDay75, R.id.ColDay85, R.id.ColDay100, R.id.ColDay120, R.id.ColDay135, R.id.ColDay150, R.id.ColDie
+                --*/
         lisView1.setAdapter(sAdap);
 
         lisView1.setOnItemClickListener(new OnItemClickListener() {

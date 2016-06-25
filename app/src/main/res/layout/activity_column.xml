@@ -4,22 +4,24 @@
     android:layout_height="fill_parent" >
 
 
-        <TextView
+    <TextView
             android:id="@+id/ColDistanceID"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="DistanceID"/>
+            android:text="DistanceID"
+        android:textSize="20dp" />
 
-        <TextView
-            android:id="@+id/ColYear"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Year"/>
+    <TextView
+        android:id="@+id/ColYear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="Year"
+        android:textSize="20dp" />
 
 
-    </LinearLayout>
+</LinearLayout>
 
 
 
