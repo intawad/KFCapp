@@ -133,7 +133,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="ออกราก2 :"
+                    android:text="ออกราก2"
                     android:id="@+id/textView5"
                     android:textSize="@dimen/h2"
                     android:layout_weight="1"
